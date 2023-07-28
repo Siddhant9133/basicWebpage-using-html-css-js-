@@ -1,0 +1,96 @@
+<html>
+<head>
+    <link rel="stylesheet" href="abc.css">
+    <title></title>
+</head>
+
+
+<body>
+    <div class="header" id="header">
+        <nav>
+            <img src="images/Logo2.png"  class="logo" alt="">
+            <ul>
+                <li><a href="#" id="m1">Mclaren GT</a></li>
+                <li><a href="#" id="m2">Mclaren P1</a></li>
+                <li><a href="#" id="m3">Mclaren F1</a></li>
+                <li><a href="#" id="m4">Mclaren 600LT</a></li>
+                <li><a href="#" id="m5">Mclaren ARTURA</a></li>
+            </ul>
+            <a href="#" class="btn">Book Now</a>
+        </nav>
+        <div class="info">
+            <div>
+                <h2 id="mph">2.8s</h2>
+                <p>60 mph</p>
+            </div>
+            <div>
+                <h2 id="maxrange">250 mph</h2>
+                <p>Max Range</p>
+            </div>
+            <div class="line">
+                
+            </div>
+            <div>
+                <h2 id="model">Mclaren GT</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        
+        var header = document.getElementById("header");
+        var m1 = document.getElementById("m1");
+        var m2 = document.getElementById("m2");
+        var m3 = document.getElementById("m3");
+        var m4 = document.getElementById("m4");
+        var m5 = document.getElementById("m5");
+        var model = document.getElementById("model");
+        var mph = document.getElementById("mph");
+        var maxrange = document.getElementById("maxrange");
+        var topspeed = document.getElementById("topspeed");
+
+
+        m1.onclick=function()
+        {
+            header.style.backgroundImage="url(images/1.jpg)";
+            model.innerHTML="Mclaren GT";
+            mph.innerHTML="2.8s";
+            maxrange.innerHTML="250mph";
+        }
+        m2.onclick=function()
+        {
+            header.style.backgroundImage="url(images/2.jpg)";
+            model.innerHTML="Mclaren P1";
+            mph.innerHTML="2.4s";
+            maxrange.innerHTML="217mph";
+        }
+        m3.onclick=function()
+        {
+            header.style.backgroundImage="url(images/3.jpg)";
+            model.innerHTML="Mclaren F1";
+            mph.innerHTML="3.2s";
+            maxrange.innerHTML="240mph";
+         
+        }
+        m4.onclick=function()
+        {
+            header.style.backgroundImage="url(images/4.jpg)";
+            model.innerHTML="Mclaren 600LT";
+            mph.innerHTML="2.8s";
+            maxrange.innerHTML="240mph";
+        }
+        m5.onclick=function()
+        {
+            header.style.backgroundImage="url(images/5.jpg)";
+            model.innerHTML="Mclaren ARTURA";
+            mph.innerHTML="3.0s";
+            maxrange.innerHTML="205mph";
+        }
+
+
+    </script>
+
+</body>
+</html>
