@@ -1,66 +1,62 @@
-*
-{
+/* General reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.header
-{
+/* Header section */
+.header {
     width: 100%;
     height: 100vh;
     background-image: url(images/1.jpg);
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
     padding: 0 7%;
-    
     transition: background-image 1s;
 }
 
-nav
-{
+/* Navigation Bar */
+nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     align-items: center;
+    padding: 10px 0;
+    z-index: 10;  /* Ensure the nav stays on top */
 }
 
-.logo
-{
+/* Logo styling */
+.logo {
     mix-blend-mode: multiply;
     margin-left: 20px;
     margin-top: 20px;
     width: 200px;
     cursor: pointer;
-    
-
 }
 
-nav ul
-{
+/* Navbar items */
+nav ul {
     flex: 1;
     text-align: center;
 }
 
-nav ul li
-{
+nav ul li {
     display: inline-block;
     margin: 10px 20px;
 }
 
-nav ul li a
-{
+nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 1.5em;
 }
 
-nav .btn
-{
+nav .btn {
     color: #fff;
     text-decoration: none;
     border: 1px solid #fff;
@@ -69,8 +65,8 @@ nav .btn
     margin-right: 7%;
 }
 
-.info
-{
+/* Information section */
+.info {
     width: 100%;
     padding: 0 7%;
     display: flex;
@@ -79,22 +75,72 @@ nav .btn
     position: fixed;
     bottom: 50px;
     left: 0;
+    z-index: 5;
 }
 
-.info div
-{
+.info div {
     margin: 0 20px;
 }
 
-.info div h2
-{
+.info div h2 {
     font-size: 45px;
     font-weight: 400;
 }
 
-.info .line
-{
+.info .line {
     flex: 1;
     background: #fff;
     height: 4px;
+}
+
+/* Mobile responsiveness: Media Queries */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 5%;
+    }
+
+    .logo {
+        width: 150px; /* Adjust logo size on smaller screens */
+    }
+
+    nav ul {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+
+    nav ul li {
+        margin: 10px 15px; /* Reduce spacing between menu items */
+    }
+
+    nav .btn {
+        padding: 8px 20px;  /* Adjust button size */
+    }
+
+    .info {
+        flex-direction: column;  /* Stack items vertically on mobile */
+        position: absolute;  /* Allow information section to scroll */
+        bottom: 20px;
+    }
+
+    .info div h2 {
+        font-size: 36px;  /* Smaller font size for mobile */
+    }
+
+    .info .line {
+        width: 80%;  /* Adjust line width on small screens */
+    }
+}
+
+/* Extra small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    nav ul {
+        font-size: 1em;  /* Further reduce font size */
+    }
+
+    .info div h2 {
+        font-size: 30px;  /* Reduce heading size further */
+    }
+
+    .info {
+        bottom: 10px;  /* Adjust position of info on very small screens */
+    }
 }
