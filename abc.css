@@ -14,7 +14,7 @@
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
-    padding: 0 7%;
+    padding: 0 5%;
     transition: background-image 1s;
 }
 
@@ -27,33 +27,29 @@ nav {
     display: flex;
     align-items: center;
     padding: 10px 0;
-    z-index: 10;  /* Ensure the nav stays on top */
+    z-index: 10;
+    justify-content: space-between;
 }
 
-/* Logo styling */
-.logo {
-    mix-blend-mode: multiply;
-    margin-left: 20px;
-    margin-top: 20px;
-    width: 200px;
+nav .logo {
+    width: 150px;
     cursor: pointer;
 }
 
-/* Navbar items */
 nav ul {
+    display: flex;
+    justify-content: center;
     flex: 1;
-    text-align: center;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 10px 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 nav .btn {
@@ -62,18 +58,17 @@ nav .btn {
     border: 1px solid #fff;
     padding: 10px 30px;
     border-radius: 30px;
-    margin-right: 7%;
 }
 
 /* Information section */
 .info {
     width: 100%;
-    padding: 0 7%;
+    padding: 0 5%;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     color: #fff;
     position: fixed;
-    bottom: 50px;
+    bottom: 20px;
     left: 0;
     z-index: 5;
 }
@@ -83,7 +78,7 @@ nav .btn {
 }
 
 .info div h2 {
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 400;
 }
 
@@ -93,54 +88,55 @@ nav .btn {
     height: 4px;
 }
 
-/* Mobile responsiveness: Media Queries */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
     .header {
         padding: 0 5%;
     }
 
-    .logo {
-        width: 150px; /* Adjust logo size on smaller screens */
+    nav .logo {
+        width: 120px; /* Adjust logo size on smaller screens */
     }
 
     nav ul {
-        font-size: 1.2em; /* Smaller font size for mobile */
+        font-size: 1em; /* Adjust font size */
     }
 
     nav ul li {
-        margin: 10px 15px; /* Reduce spacing between menu items */
+        margin: 0 10px; /* Adjust spacing between menu items */
     }
 
     nav .btn {
-        padding: 8px 20px;  /* Adjust button size */
+        padding: 8px 20px; /* Adjust button size */
     }
 
     .info {
-        flex-direction: column;  /* Stack items vertically on mobile */
-        position: absolute;  /* Allow information section to scroll */
-        bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        bottom: 10px;
     }
 
     .info div h2 {
-        font-size: 36px;  /* Smaller font size for mobile */
+        font-size: 30px; /* Smaller font size for mobile */
     }
 
     .info .line {
-        width: 80%;  /* Adjust line width on small screens */
+        width: 70%; /* Adjust line width */
     }
 }
 
-/* Extra small screens (phones in portrait mode) */
+/* Very small screens (phones in portrait mode) */
 @media (max-width: 480px) {
     nav ul {
-        font-size: 1em;  /* Further reduce font size */
+        font-size: 0.9em; /* Further reduce font size */
     }
 
     .info div h2 {
-        font-size: 30px;  /* Reduce heading size further */
+        font-size: 26px; /* Smaller font size */
     }
 
     .info {
-        bottom: 10px;  /* Adjust position of info on very small screens */
+        bottom: 5px; /* Adjust position of info */
     }
 }
